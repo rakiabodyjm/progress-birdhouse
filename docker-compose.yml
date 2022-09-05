@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  nginx:
+    # build: "./nginx"
+    image: rakiabodyjm/alpha-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - frontend
+      - backend
+      - database
+
+  frontend:
+    build: "./frontend"
+    ports:
+      - "2006:2006"
+
+  backend:
+    build: "./backend"
+    ports:
+      - "6006:6006"
+
+  database:
+    # build: "./database"
+    image: rakiabodyjm/alpha-database
+    ports:
+      - "1433:1433"
+    volumes:
+      - "./database/data:/data"
