@@ -23,4 +23,4 @@ _This pulls 2 images from Docker Hub, configured nginx and sql-server images._
 
 ---
 
-`Login Credentials are autofilled upon Login`
+> Login Credentials are autofilled upon Login
