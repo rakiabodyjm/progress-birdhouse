@@ -15,16 +15,20 @@ services:
     build: "./frontend"
     ports:
       - "2006:2006"
+    depends_on:
+      - backend
 
   backend:
     build: "./backend"
     ports:
       - "6006:6006"
+    depends_on:
+      - database
 
   database:
     # build: "./database"
     image: rakiabodyjm/alpha-database
     ports:
       - "1433:1433"
-    volumes:
-      - "./database/data:/data"
+    # volumes:
+    #   - "./database/data:/data"
