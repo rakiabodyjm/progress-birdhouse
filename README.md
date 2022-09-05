@@ -19,4 +19,8 @@ docker compose up
 
 _This pulls 2 images from Docker Hub, configured nginx and sql-server images._
 
-**3**. Note that by default, nginx uses Port **80** and rewrites requests to frontend at URL `/` and backend requests at URL `/api`
+> By default, nginx uses Port **80** and rewrites requests to frontend at URL `/` and backend requests at URL `/api`
+
+---
+
+`Login Credentials are autofilled upon Login`
